@@ -110,6 +110,19 @@
         </footer>
     </div>
 
+    <script>
+    // This code handles the scroll position on reload
+    window.onload = function() {
+        // This tells the browser to let you control the scroll position
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        // This scrolls the window to the very top (x:0, y:0)
+        window.scrollTo(0, 0);
+    };
+</script>
+
 </body>
 </html>
+
 
