@@ -40,7 +40,7 @@ body {
     transform: translateY(-50%);
     z-index: 999;
     cursor: pointer;
-    
+
     /* Collapsed State (the small oval) */
     width: 60px;
     height: 60px;
@@ -49,7 +49,7 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     overflow: hidden;
     backdrop-filter: blur(5px);
-    
+
     /* Smooth transition for the expansion */
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
