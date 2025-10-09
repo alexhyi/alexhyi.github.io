@@ -145,14 +145,17 @@ a {
 }
 
 .job-description {
-    flex-basis: 70%; /* Sets the width of the right column */
+    flex-basis: 70%;
+    font-size: 17px; /* Makes the description text slightly smaller */
 }
 
 /* --- Styling for the content inside the columns --- */
 
 .job-info h3 {
     margin-top: 0;
-    margin-bottom: 0.25rem; /* Reduces space below the job title */
+    margin-bottom: 0.25rem;
+    font-weight: bold; /* Makes the job title bold */
+    color: var(--header-color); /* Ensures it's deep purple */
 }
 
 .job-info h4 {
@@ -214,4 +217,5 @@ a {
     margin-bottom: 0;
     color: var(--primary-text-color); /* ADDED THIS: Ensures paragraph text isn't styled like a link */
 }
+
 
