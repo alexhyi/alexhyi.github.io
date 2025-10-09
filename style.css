@@ -183,5 +183,36 @@ a {
 }
 
 
+/* --- 6. Projects Section: Clickable Bubbles --- */
+
+.project-bubble {
+    display: block; /* Makes the entire link a block element */
+    background-color: #fff; /* White background for the bubble */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Subtle shadow */
+    padding: 1.5rem; /* Internal spacing */
+    margin-bottom: 2.5rem; /* Space between bubbles */
+    text-decoration: none; /* Remove underline from the link */
+    color: var(--primary-text-color); /* Inherit text color */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.project-bubble:hover {
+    transform: translateY(-5px); /* Lifts the bubble slightly on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* More prominent shadow on hover */
+}
+
+.project-bubble h3 {
+    color: var(--header-color); /* Ensure project title uses header color */
+    margin-top: 0; /* Remove extra space at the top of the title */
+    margin-bottom: 0.75rem; /* Space between title and description */
+    font-size: 1.5em; /* Make project titles a bit larger */
+}
+
+.project-bubble p {
+    margin-bottom: 0; /* Remove extra space at the bottom of the paragraph */
+}
+
+
 
 
