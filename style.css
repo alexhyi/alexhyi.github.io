@@ -120,16 +120,39 @@ body {
 }
 
 /* --- 4. Section & Typography Styling --- */
-header, section, footer {
+/* --- 4. Section & Typography Styling --- */
+
+/* ADD THIS NEW RULE FOR THE HEADER STRIPE */
+header {
+    background-color: var(--nav-background); /* Uses that nice pale purple */
+    padding: 2rem 0; /* Adds vertical space around your name */
+    border-bottom: 1px solid #d1d1e0; /* A subtle line to separate it */
+}
+
+/* MODIFY THIS RULE: remove 'header' from the list */
+section, footer {
     margin-bottom: 40px;
 }
 
-h1, h2, h3 {
+/* MODIFY THIS RULE to separate the h1 styling */
+h1 {
+    color: var(--header-color);
+    max-width: 850px; /* Aligns with your main content width */
+    margin: 0 auto;   /* Centers the text block */
+    padding: 0 2rem;  /* Matches horizontal spacing of content */
+    font-size: 3em;
+}
+
+h2, h3 {
     color: var(--header-color);
 }
 
-a {
-    color: var(--link-color);
+/* Find your .content-container rule and add some top padding */
+.content-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 4rem; /* ADD THIS to create space below the new header */
 }
 
 
