@@ -94,13 +94,13 @@ body {
 .sidebar-nav:hover li a {
     opacity: 1;
     transform: scale(1);
-    transition-delay: 0.15s;
+    transition-delay: 0.075s;
     pointer-events: auto;
 }
 
 .sidebar-nav li a:hover {
     color: var(--link-color);
-    transform: scale(1.15);
+    transform: scale(0.8);
 }
 
 /* --- 4. Section & Typography Styling --- */
@@ -129,3 +129,4 @@ h2, h3 {
 a {
     color: var(--link-color);
 }
+
