@@ -1,21 +1,92 @@
+/* --- 1. Global Styles & Variables --- */
+:root {
+    --background-color: #f0f8ff; /* Pale Blue */
+    --primary-text-color: #2c3e50; /* Dark Blue-Gray */
+    --header-color: #483d8b;      /* Dark Slate Blue */
+    --link-color: #6a5acd;         /* Slate Blue */
+    --nav-background: rgba(230, 230, 250, 0.9); /* Semi-transparent Lavender */
+    --nav-highlight: rgba(255, 255, 255, 0.7);
+}
+
+/* This new rule enables smooth scrolling for the whole page! */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+/* --- 2. Centered Content Layout --- */
+/* This container centers your content and gives it a max-width */
+.content-container {
+    max-width: 850px; /* A reasonable width for readability */
+    margin: 0 auto;   /* This is the trick to center the block */
+    padding: 2rem;    /* Some space on the sides */
+}
+
+
 /* --- 3. Floating Expanding Navigation --- */
+
+/* Find this block... */
 .sidebar-nav {
-    /* Positioning */
-    position: fixed;
-    top: 50%; /* Center vertically */
-    right: 20px;
-    transform: translateY(-50%); /* Adjust vertical centering */
-    z-index: 999; /* <<< ADD THIS LINE TO BRING IT TO THE FRONT */
-    
-    /* Collapsed State (the small oval) */
-    width: 60px;
-    height: 60px;
-    background-color: var(--nav-background);
-    border-radius: 30px; /* Makes it a circle/oval */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    overflow: hidden; /* This hides the links when collapsed */
-    backdrop-filter: blur(5px); /* Cool glass-like effect */
-    
-    /* Smooth transition for the expansion */
+    /* ...existing styles... */
+    cursor: pointer; /* <<< ADD THIS LINE */
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* CHANGE THIS RULE from .sidebar-nav:hover to .sidebar-nav.open */
+.sidebar-nav.open {
+    width: 200px;
+    height: 320px; 
+    border-radius: 20px;
+}
+
+/* The text/icon that is always visible (no changes here) */
+.sidebar-nav::before {
+    /* ...existing styles... */
+}
+
+/* CHANGE THIS RULE from .sidebar-nav:hover::before to .sidebar-nav.open::before */
+.sidebar-nav.open::before {
+    opacity: 0; 
+}
+
+/* Styling for the list and links (no changes here) */
+.sidebar-nav ul {
+    /* ...existing styles... */
+}
+.sidebar-nav li a {
+    /* ...existing styles... */
+}
+
+/* CHANGE THIS RULE from .sidebar-nav:hover li a to .sidebar-nav.open li a */
+.sidebar-nav.open li a {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.15s;
+}
+
+/* The effect for hovering over a specific link (no changes here) */
+.sidebar-nav li a:hover {
+    /* ...existing styles... */
+}
+
+/* --- 4. Section & Typography Styling (Mostly Unchanged) --- */
+header, section, footer {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: var(--header-color);
+}
+
+a {
+    color: var(--link-color);
 }
