@@ -134,9 +134,20 @@ a {
 /* --- 5. Experience Section: Two-Column Layout --- */
 
 .job-entry {
-    display: flex; /* This activates Flexbox! */
-    gap: 2rem;     /* Creates a nice space between the two columns */
-    margin-bottom: 3rem; /* Adds space between each job entry */
+    display: flex;
+    gap: 2rem;
+    background-color: #eaf4ff; /* Bubble background color */
+    border-radius: 15px;      /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Subtle shadow */
+    padding: 1.5rem;          /* Internal spacing */
+    margin-bottom: 2.5rem;    /* Consistent spacing */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* ADD THIS new rule for a hover effect on the experience bubbles */
+.job-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .job-info {
@@ -190,8 +201,8 @@ a {
 
 .project-bubble {
     display: block;
-    background-color: #eaf4ff; /* CHANGED: A softer, distinct pale blue */
-    border: 2px solid var(--header-color); /* CHANGED: A deep purple outline */
+    background-color: #eaf4ff;
+    /* border: 2px solid var(--header-color); */ /* This line is now removed */
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     padding: 1.5rem;
@@ -217,5 +228,6 @@ a {
     margin-bottom: 0;
     color: var(--primary-text-color); /* ADDED THIS: Ensures paragraph text isn't styled like a link */
 }
+
 
 
