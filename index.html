@@ -111,18 +111,37 @@
     </div>
 
     <script>
-    // This code handles the scroll position on reload
+    // This is your existing code for the scroll-on-reload fix
     window.onload = function() {
-        // This tells the browser to let you control the scroll position
         if (history.scrollRestoration) {
             history.scrollRestoration = 'manual';
         }
-        // This scrolls the window to the very top (x:0, y:0)
         window.scrollTo(0, 0);
     };
+
+    // --- ADD THE NEW CODE BELOW ---
+    // This new code handles smooth scrolling without changing the URL
+    document.querySelectorAll('.sidebar-nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            // 1. Prevent the default link behavior (which changes the URL)
+            e.preventDefault();
+
+            // 2. Find the target section using the link's href
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            // 3. If the section exists, smoothly scroll to it
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 </script>
 
 </body>
 </html>
+
 
 
