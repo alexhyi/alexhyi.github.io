@@ -5,10 +5,8 @@
     --header-color: #483d8b;      /* Dark Slate Blue */
     --link-color: #6a5acd;         /* Slate Blue */
     --nav-background: rgba(230, 230, 250, 0.9); /* Semi-transparent Lavender */
-    --nav-highlight: rgba(255, 255, 255, 0.7);
 }
 
-/* This new rule enables smooth scrolling for the whole page! */
 html {
     scroll-behavior: smooth;
 }
@@ -20,29 +18,23 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-size: 18px; /* <<< ADD THIS LINE */
+    font-size: 18px;
 }
-
 
 /* --- 2. Centered Content Layout --- */
 .content-container {
-    max-width: 850px; /* A reasonable width for readability */
-    margin: 0 auto;   /* This is the trick to center the block */
-    padding: 2rem;    /* Some space on the sides */
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem; /* Combined padding: 4rem top, 2rem sides, 2rem bottom */
 }
-
 
 /* --- 3. Floating Expanding Navigation --- */
 .sidebar-nav {
-    /* Positioning */
     position: fixed;
-    top: 50%; /* Center vertically */
+    top: 50%;
     right: 20px;
     transform: translateY(-50%);
     z-index: 999;
-    /* cursor: pointer; has been removed */
-
-    /* Collapsed State (the small oval) */
     width: 60px;
     height: 60px;
     background-color: var(--nav-background);
@@ -50,21 +42,17 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     overflow: hidden;
     backdrop-filter: blur(5px);
-
-    /* Smooth transition for the expansion */
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* Expanded State (CHANGED back to :hover) */
 .sidebar-nav:hover {
     width: 200px;
     height: 320px;
     border-radius: 20px;
 }
 
-/* The text/icon that is always visible */
 .sidebar-nav::before {
-    content: '☰'; /* A simple hamburger icon */
+    content: '☰';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,12 +62,10 @@ body {
     transition: opacity 0.2s ease;
 }
 
-/* Hide the icon when the nav is hovered (CHANGED back to :hover) */
 .sidebar-nav:hover::before {
     opacity: 0;
 }
 
-/* Styling for the list and links */
 .sidebar-nav ul {
     list-style: none;
     padding: 0;
@@ -102,44 +88,37 @@ body {
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    pointer-events: none; /* ADDED THIS: Prevents clicks on hidden links */
+    pointer-events: none;
 }
 
-/* Make links visible when the nav is hovered (CHANGED back to :hover) */
 .sidebar-nav:hover li a {
     opacity: 1;
     transform: scale(1);
     transition-delay: 0.15s;
-    pointer-events: auto; /* ADDED THIS: Re-enables clicks ONLY when visible */
+    pointer-events: auto;
 }
 
-/* The effect for hovering over a specific link */
 .sidebar-nav li a:hover {
     color: var(--link-color);
     transform: scale(1.15);
 }
 
 /* --- 4. Section & Typography Styling --- */
-/* --- 4. Section & Typography Styling --- */
-
-/* ADD THIS NEW RULE FOR THE HEADER STRIPE */
 header {
-    background-color: var(--nav-background); /* Uses that nice pale purple */
-    padding: 2rem 0; /* Adds vertical space around your name */
-    border-bottom: 1px solid #d1d1e0; /* A subtle line to separate it */
+    background-color: var(--nav-background);
+    padding: 2rem 0;
+    border-bottom: 1px solid #d1d1e0;
 }
 
-/* MODIFY THIS RULE: remove 'header' from the list */
 section, footer {
     margin-bottom: 40px;
 }
 
-/* MODIFY THIS RULE to separate the h1 styling */
 h1 {
     color: var(--header-color);
-    max-width: 850px; /* Aligns with your main content width */
-    margin: 0 auto;   /* Centers the text block */
-    padding: 0 2rem;  /* Matches horizontal spacing of content */
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 2rem;
     font-size: 3em;
 }
 
@@ -147,12 +126,6 @@ h2, h3 {
     color: var(--header-color);
 }
 
-/* Find your .content-container rule and add some top padding */
-.content-container {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 2rem;
-    padding-top: 4rem; /* ADD THIS to create space below the new header */
+a {
+    color: var(--link-color);
 }
-
-
