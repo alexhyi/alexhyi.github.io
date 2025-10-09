@@ -131,4 +131,56 @@ a {
 }
 
 
+/* --- 5. Experience Section: Two-Column Layout --- */
+
+.job-entry {
+    display: flex; /* This activates Flexbox! */
+    gap: 2rem;     /* Creates a nice space between the two columns */
+    margin-bottom: 3rem; /* Adds space between each job entry */
+}
+
+.job-info {
+    flex-basis: 30%; /* Sets the width of the left column */
+    flex-shrink: 0;  /* Prevents the left column from shrinking */
+}
+
+.job-description {
+    flex-basis: 70%; /* Sets the width of the right column */
+}
+
+/* --- Styling for the content inside the columns --- */
+
+.job-info h3 {
+    margin-top: 0;
+    margin-bottom: 0.25rem; /* Reduces space below the job title */
+}
+
+.job-info h4 {
+    margin: 0;
+    font-weight: normal; /* Makes the company name less bold */
+}
+
+.job-meta {
+    margin-top: 0.5rem;
+    font-size: 0.9em; /* Makes the date/location slightly smaller */
+    color: #555;
+}
+
+.job-description ul {
+    margin: 0;
+    padding-left: 1.5rem; /* Adjusts the indentation of bullet points */
+}
+
+
+/* --- Responsive Design for Mobile --- */
+/* This code will stack the columns on smaller screens */
+
+@media (max-width: 768px) {
+    .job-entry {
+        flex-direction: column; /* Stacks columns vertically on mobile */
+        gap: 0.5rem; /* Reduces the gap in the stacked view */
+    }
+}
+
+
 
