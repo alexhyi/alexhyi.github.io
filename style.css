@@ -20,6 +20,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-size: 18px; /* <<< ADD THIS LINE */
 }
 
 
@@ -130,4 +131,5 @@ h1, h2, h3 {
 a {
     color: var(--link-color);
 }
+
 
