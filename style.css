@@ -258,6 +258,26 @@ a {
     transform: scale(1.15); /* Makes icons slightly larger on hover */
 }
 
+/* --- 8. Contact Section: Icon Links --- */
+
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center;
+    gap: 3rem; /* The space between each icon */
+    margin-top: 2rem; /* Adds space below the contact paragraph */
+}
+
+.contact-icons img {
+    height: 45px; /* Sets a consistent height */
+    width: 45px;  /* Sets a consistent width */
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2); /* Makes icons larger on hover */
+    opacity: 0.8; /* Slightly fades the icon on hover for a modern feel */
+}
 
 
 
