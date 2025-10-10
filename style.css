@@ -230,6 +230,35 @@ a {
     color: var(--primary-text-color); /* ADDED THIS: Ensures paragraph text isn't styled like a link */
 }
 
+/* --- 7. Skills Section: Icon Bubble --- */
+
+.skill-bubble {
+    background-color: #eaf4ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 2rem;
+    text-align: center;
+}
+
+.icons-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows icons to wrap onto the next line */
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Centers the icons vertically */
+    gap: 2rem; /* The space between each icon */
+}
+
+.icons-container img {
+    height: 55px; /* Sets a consistent height for all icons */
+    width: 55px;  /* Sets a consistent width for all icons */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.icons-container img:hover {
+    transform: scale(1.15); /* Makes icons slightly larger on hover */
+}
+
+
 
 
 
