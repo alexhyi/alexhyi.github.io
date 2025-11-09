@@ -52,7 +52,7 @@
                         </div>
                 </a>
 
-                 <a href="https://www.codemetal.ai/" target="_blank" class="job-entry">
+               <a href="https://www.codemetal.ai/" target="_blank" class="job-entry">
                     <div class="job-info">
                         <h3>AI Research Intern</h3>
                         <h4>Code Metal</h4>
@@ -110,103 +110,4 @@
                     </article>
                 </a>
                 
-            </section>
-
-            <section id="skills">
-                <h2>Skills</h2>
-                <div class="skill-bubble">
-                    <div class="icons-container">
-                        <img src="icons/python-original-wordmark.svg" alt="Python" title="Python">
-                        <img src="icons/matlab-original.svg" alt="MATLAB" title="MATLAB">
-                        <img src="icons/github-original-wordmark.svg" alt="Git" title="Git">
-                        <img src="icons/docker-original-wordmark.svg" alt="Docker" title="Docker">
-                        <img src="icons/pytorch-original-wordmark.svg" alt="PyTorch" title="PyTorch">
-                        <img src="icons/r-original.svg" alt="R" title="R">
-                        <img src="icons/hf-logo.svg" alt="HuggingFace" title="Hugging Face">
-                        <img src="icons/Google-cloud-platform.svg" alt="Google Cloud" title="Google Cloud">
-                        <img src="icons/nvidia-isaac.webp" alt="Nvidia Isaac" title="Nvidia Isaac">
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>
-                    I am actively seeking internships and research opportunities for Summer 2026. I am eager to connect with professionals and researchers in the field. Please feel free to reach out!
-                </p>
-
-                <div class="contact-icons">
-                    <a href="mailto:alexyi2027@u.northwestern.edu" title="Email">
-                        <img src="icons/gmail.png" alt="Email Icon">
-                    </a>
-                    <a href="https://www.linkedin.com/in/yi-alex/" target="_blank" title="LinkedIn">
-                        <img src="icons/linkedin.png" alt="LinkedIn Icon">
-                    </a>
-                    <a href="https://github.com/alexhyi" target="_blank" title="GitHub">
-                        <img src="icons/github.svg" alt="GitHub Icon">
-                    </a>
-                </div>
-                
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 Alex Yi. All rights reserved.</p>
-        </footer>
-    </div>
-
-    <script>
-    // This is your existing code for the scroll-on-reload fix
-    window.onload = function() {
-        if (history.scrollRestoration) {
-            history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-    };
-
-    // --- ADD THE NEW CODE BELOW ---
-    // This new code handles smooth scrolling without changing the URL
-    document.querySelectorAll('.sidebar-nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            // 1. Prevent the default link behavior (which changes the URL)
-            e.preventDefault();
-
-            // 2. Find the target section using the link's href
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            // 3. If the section exists, smoothly scroll to it
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <a href="#" class="project-bubble">
